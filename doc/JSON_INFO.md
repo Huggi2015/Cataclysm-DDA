@@ -2412,7 +2412,7 @@ at level `2` to the item.
 "lumination": [ [ "head", 20 ], [ "arm_l", 10 ] ], // List of glowing bodypart and the intensity of the glow as a float. (default: empty)
 "metabolism_modifier": 0.333, // Extra metabolism rate multiplier. 1.0 doubles usage, -0.5 halves.
 "fatigue_modifier": 0.5, // Extra fatigue rate multiplier. 1.0 doubles usage, -0.5 halves.
-"fatigue_regen_modifier": 0.333, // Modifier for the rate at which fatigue and sleep deprivation drops when resting.
+"fatigue_regen_modifier": 0.333, // Modifier for the rate at which fatigue and sleep deprivation drops when resting. The bigger the number, the quicker fatigue is removed while asleep. Can be a negative value but anything less than -2 will prevent a character from removing fatiuge while asleep. I think fatigue follows the equation F=(25*h*1+25*1*m-50)/0.5 where F is the fatigue deducted while asleep, h is the hours slept, and m is the current fatigue_regen_modifier of your character.
 "stamina_regen_modifier": 0.1, // Increase stamina regen by this proportion (1.0 being 100% of normal regen)
 "cardio_multiplier": 1.5, // Multiply total cardio fitness by this amount
 "healing_awake": 1.0, // Healing rate per turn while awake.
